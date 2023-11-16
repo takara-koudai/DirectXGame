@@ -91,6 +91,7 @@ void MapChip::Draw(ViewProjection& viewProjection)
 	{
 		// worldTransforms_[i]
 		
+
 		if (blockTypes_[i] == 1)
 		{
 			StageModel_->Draw(worldTransforms_[i], viewProjection, StageHandle_);
