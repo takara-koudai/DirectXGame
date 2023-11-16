@@ -11,9 +11,7 @@ class MapChip
 {
 public:
 
-	void Initialize(Model* model, uint32_t textureHandle);
-
-    void BlueInitialize(Model* Bluemodel, uint32_t BluetextureHandle);
+	void Initialize(Model* model, uint32_t textureHandle,Model* Bluemodel,uint32_t BluetextureHandle);
 
 	void Update();
 
@@ -53,6 +51,7 @@ private:
          {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	    },
 
+	    /*
 	    {
          {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
          {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
@@ -80,7 +79,7 @@ private:
 	    },
 
 
-        /*
+        
 	    {
          {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
          {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},

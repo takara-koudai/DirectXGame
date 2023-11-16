@@ -42,11 +42,7 @@ void GameScene::Initialize() {
 	#pragma region ブロック初期化
 	//黒ブロック
 	Stage_ = new MapChip();
-	Stage_->Initialize(StageModel_, StageTextureHandle_);
-
-	//青ブロック
-	BlueStage_ = new MapChip();
-	BlueStage_->BlueInitialize(BlueStageModel_, BlueStageTextureHandle_);
+	Stage_->Initialize(StageModel_, StageTextureHandle_,BlueStageModel_,BlueStageTextureHandle_);
 
 	#pragma endregion
 
@@ -62,7 +58,6 @@ void GameScene::Update()
 {
 
 	Stage_->Update();
-	BlueStage_->Update();
 
 	debugCamera_->Update();
 
@@ -131,16 +126,8 @@ void GameScene::Draw() {
 	//プレイヤー
 	model_->Draw(worldTransform_, viewProjection_, TextureHandel_);
 
-	//model_->Draw(worldTransform_, debugCamera_->GetViewProjection(), TextureHandel_);
-
-
 	//ステージ
 	Stage_->Draw(viewProjection_);
-
-	BlueStage_->Draw(viewProjection_);
-
-	
-
 
 	// 3Dオブジェクト描画後処理
 	Model::PostDraw();
